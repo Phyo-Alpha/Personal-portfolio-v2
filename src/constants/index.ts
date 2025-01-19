@@ -13,7 +13,6 @@ import {
   react,
   python,
   tailwind,
-  threejs,
   nextjs,
   nextjs2,
   wordpress,
