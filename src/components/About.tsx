@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { linkedIn } from "@/assets/social";
 import SectionWrapper from "./hoc/SectionWrapper";
-import { profileImage } from "@/assets";
+import { profileImage, resumePdf } from "@/assets";
 
 function About() {
     return (
@@ -22,7 +22,7 @@ function About() {
                     </div>
                     <p className="text-lg">I'm a software developer specializing in modern web applications using React, Next.js, and React Native. I also build WordPress templates with PHP.</p>
                     <div className="flex gap-3">
-                        <a href="./src/assets/Edward_Phyo_Resume.pdf" download>
+                        <a href={resumePdf} download>
                             <Button variant="default" className="rounded-full text-lg tracking-wide bg-yellow-300">
                                 Download CV
                             </Button>
