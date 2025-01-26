@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { linkedIn } from "@/assets/social";
 import SectionWrapper from "./hoc/SectionWrapper";
+import { profileImage } from "@/assets";
 
 function About() {
     return (
@@ -40,7 +41,7 @@ function About() {
                 </div>
                 <div className="flex justify-center items-center">
                     <img
-                        src="./src/assets/profile.jpeg"
+                        src={profileImage}
                         alt=""
                         className="rounded-xl border size-60"
                     />
