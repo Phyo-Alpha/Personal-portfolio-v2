@@ -1,8 +1,14 @@
 import SectionWrapper from "@/components/hoc/SectionWrapper";
+import { motion } from "framer-motion";
 
 function AboutMe() {
     return (
-        <section className="space-y-12">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="space-y-12"
+        >
             <div className="space-y-6 text-xl">
                 <h1 className="font-bold text-5xl underline underline-offset-4">About Me</h1>
                 <p>My journey with web development started during my university years where I was learning about data processing and analysis. During one of the projects, I contributed to cinema application website where I use Django and HTML template to build the app. This is where I discovered the joy of creating websites and as such shift my career interest from data analysis to web development.</p>
@@ -18,7 +24,7 @@ function AboutMe() {
             <div>
                 <h2></h2>
             </div>
-        </section>
+        </motion.div>
     )
 }
 

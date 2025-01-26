@@ -1,5 +1,5 @@
 import { studio20 } from "@/assets/company";
-import { ckp_portal, happie_token, spl, syl, training_companion } from "@/assets/projects";
+import { ckp_portal, happie_token, spl, syl, syl2, training_companion } from "@/assets/projects";
 import {
   html,
   css,
@@ -106,6 +106,30 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    title: "Singapore Youth League Website Revamp",
+    techs: [
+      {
+        techImg: react,
+        name: "React.js",
+      },
+      {
+        techImg: nextjs2,
+        name: "NEXT.js",
+      },
+      {
+        techImg: typescript,
+        name: "Typescript",
+      },
+      {
+        techImg: tailwind,
+        name: "Tailwind CSS",
+      },
+    ],
+    description: "A newly revamped website for Singapore Youth League commissioned by the FAS organization. Introduced new features and pages.",
+    image: syl2,
+    link: 'https://syl.tth.asia',
+  },
+  {
     title: "Happie-Token",
     techs: [
       {
@@ -127,6 +151,7 @@ export const projects: Project[] = [
     ],
     description: "A website for creating, buying and distributing vouchers",
     image: happie_token,
+    link: 'https://happietoken.com',
   },
   {
     title: "CKP Dashboard",
@@ -150,6 +175,7 @@ export const projects: Project[] = [
     ],
     description: "A dashboard application for managing invoices and payments between businesses",
     image: ckp_portal,
+    link: 'https://stg.ckp.tth.asia',
   },
   {
     title: "Training Companion",
@@ -196,6 +222,7 @@ export const projects: Project[] = [
     ],
     description: "A website for fans and followers of SYL league in singapore, to get updates and news about the matches and latest events.",
     image: syl,
+    link:'https://syl.sg',
   },
   {
     title: "Singapore Premier League",

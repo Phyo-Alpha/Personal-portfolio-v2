@@ -26,9 +26,9 @@ export type ProjectCardProps = HTMLAttributes<HTMLDivElement> &
     project: Project
 }
 export default function ProjectCard({ project, className, techCard, ...props }: ProjectCardProps) {
-    const { image, title, techs, description } = project
+    const { image, title, techs, description, link } = project
     return (
-        <a href="" className={className}>
+        <a href={link} className={className} target="_blank" rel="noreferrer">
             <Card className={cn("min-h-[600px] relative overflow-hidden group", className)} {...props}>
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-110"
@@ -57,12 +57,14 @@ export default function ProjectCard({ project, className, techCard, ...props }: 
                         </div>
                     </div>
                     <p className="text-muted-foreground font-bold">{description}</p>
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <Button variant="ghost" className="gap-2 p-0 hover:bg-transparent text-white hover:text-white/50">
-                            <span>Learn More</span>
-                            <ArrowRight className="h-4 w-4" />
-                        </Button>
-                    </div>
+                    {link && (
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <Button variant="ghost" className="gap-2 p-0 hover:bg-transparent text-white hover:text-white/50">
+                                <span>Visit</span>
+                                <ArrowRight className="h-4 w-4" />
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </Card>
         </a>
