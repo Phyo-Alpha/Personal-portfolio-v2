@@ -24,11 +24,8 @@ export const ExperienceCard = ({ experience }: { experience: Experience }) => {
                 borderRight: "7px solid rgba(114, 194, 200, 0.7)",
                 filter: "drop-shadow(0 0 5px #72c2c8)"
             }}
-            date={
-                <span className="text-[#72c2c8] font-medium text-sm">
-                    {experience.date}
-                </span>
-            }
+            date={experience.date}
+            dateClassName={"text-[#72c2c8] font-medium text-sm"}
             iconStyle={{
                 background: "radial-gradient(circle, #0a0a2e 30%, #1a1a4a 90%)",
                 boxShadow: "0 0 15px rgba(114, 194, 200, 0.5)",
