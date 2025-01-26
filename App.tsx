@@ -5,9 +5,9 @@ import Footer from "./src/components/Footer";
 
 export default function App() {
     return (
-        <main className="relative min-h-screen pb-20">
+        <main className="relative min-h-screen py-20">
             <Navbar />
-            <div className="mx-auto mt-20 space-y-12 px-6 pt-12">
+            <div className="mx-auto px-1 sm:px-6">
                 <Outlet />
             </div>
             <Footer />

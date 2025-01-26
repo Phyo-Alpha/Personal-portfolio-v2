@@ -4,7 +4,7 @@ import { projects } from "@/constants";
 
 function MyWorks() {
     return (
-        <section className="space-y-12 pb-20">
+        <section className="space-y-12">
             <section className="space-y-12 text-center">
                 <h1 className="text-5xl font-bold">My Works</h1>
                 <p className="text-xl">Here are the lists of the projects I have contributed in.</p>
