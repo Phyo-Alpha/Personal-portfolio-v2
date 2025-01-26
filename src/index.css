@@ -45,4 +45,23 @@
     --destructive-foreground: 0 0% 98%;
     --radius: 0.25rem;
   }
+
+  @keyframes pulse-slow {  
+    0%, 100% { transform: scale(1); }  
+    50% { transform: scale(1.05); }  
+  }  
+  .animate-pulse-slow {  
+      animation: pulse-slow 6s ease-in-out infinite;  
+  }  
+
+  .react-vertical-timeline::before {  
+      background: linear-gradient(to bottom, #4a22a6 0%, #72c2c8 100%) !important;  
+      width: 3px !important;  
+      animation: timeline-glow 3s ease-in-out infinite alternate;  
+  }  
+
+  @keyframes timeline-glow {  
+      from { box-shadow: 0 0 10px rgba(114, 194, 200, 0.3); }  
+      to { box-shadow: 0 0 20px rgba(114, 194, 200, 0.6); }  
+  }  
 }

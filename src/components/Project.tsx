@@ -8,10 +8,13 @@ function Project() {
         <div className="space-y-4">
             <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
             <div className="flex flex-col gap-20">
-                {projects.map((project, i) => (
+                {projects.slice(0, 2).map((project, i) => (
                     <ProjectCard project={project} key={i} />
                 ))}
             </div>
+            <a href="/projects" className="flex justify-center text-lg py-4">
+                {`Check out more of my works ->`}
+            </a>
         </div>
     )
 }

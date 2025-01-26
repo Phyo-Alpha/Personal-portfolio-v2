@@ -1,20 +1,26 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, Suspense, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
+import { Points, PointMaterial, Preload, Loader } from "@react-three/drei";
 import { random } from "maath";
-import { Object3D } from "three";
+import { Object3D, Vector3 } from "three";
 
 //@ts-expect-error I don't know what the props type
 const Stars = (props) => {
     const ref = useRef<Object3D>();
-    const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
+    const [sphere] = useState(() => {
+        const stars = random.inSphere(new Float32Array(300), { radius: 1.0 })
+        if (stars.some(v => isNaN(v))) throw new Error("Invalid positions data");
+        return stars;
+    });
+
+    // to avoid creating rotation on every frame
+    const rotation = useMemo(() => new Vector3(0.5, 0.33, 0), []);
 
     useFrame((_, delta) => {
         if (ref.current) {
-            ref.current.rotation.x -= delta / 10;
-            ref.current.rotation.y -= delta / 15;
+            ref.current.rotation.x += rotation.x * delta;
+            ref.current.rotation.y += rotation.y * delta;
         }
-
     });
 
     return (
@@ -23,7 +29,7 @@ const Stars = (props) => {
                 <PointMaterial
                     transparent
                     color='#f272c8'
-                    size={0.002}
+                    size={0.003}
                     sizeAttenuation={true}
                     depthWrite={false}
                 />
@@ -35,8 +41,8 @@ const Stars = (props) => {
 const StarsCanvas = () => {
     return (
         <div className='w-full min-h-screen absolute inset-0 z-[-1]'>
-            <Canvas camera={{ position: [0, 0, 1] }}>
-                <Suspense fallback={null}>
+            <Canvas camera={{ position: [0, 0, 1] }} gl={{ powerPreference: 'high-performance' }}>
+                <Suspense fallback={<Loader />}>
                     <Stars />
                 </Suspense>
 

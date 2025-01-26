@@ -57,12 +57,12 @@ export default function ProjectCard({ project, className, techCard, ...props }: 
                         </div>
                     </div>
                     <p className="text-muted-foreground font-bold">{description}</p>
-                    <a href="/projects" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Button variant="ghost" className="gap-2 p-0 hover:bg-transparent text-white hover:text-white/50">
                             <span>Learn More</span>
                             <ArrowRight className="h-4 w-4" />
                         </Button>
-                    </a>
+                    </div>
                 </div>
             </Card>
         </a>
