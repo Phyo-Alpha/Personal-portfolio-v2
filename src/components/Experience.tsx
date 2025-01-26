@@ -73,9 +73,9 @@ const ExperienceSection = () => {
                 <p className={`${styles.sectionSubText} text-cyan-300`}>
                     MY JOURNEY THROUGH THE COSMOS
                 </p>
-                <h2 className={`${styles.sectionHeadText} bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent`}>
+                <h1 className={`${styles.sectionHeadText}`}>
                     Stellar Career Path
-                </h2>
+                </h1>
             </motion.div>
             <div className="mt-12 flex flex-col">
                 <VerticalTimeline

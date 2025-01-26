@@ -7,7 +7,7 @@ export default function App() {
     return (
         <main className="relative min-h-screen">
             <Navbar />
-            <div className="mx-auto px-1 sm:px-6 py-20">
+            <div className="mx-auto sm:px-6">
                 <Outlet />
             </div>
             <Footer />

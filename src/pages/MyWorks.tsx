@@ -36,4 +36,4 @@ function MyWorks() {
 }
 
 
-export default SectionWrapper({ component: <MyWorks />, id: "my-works", className: "!max-w-none !p-0" });
+export default SectionWrapper({ component: <MyWorks />, id: "my-works", className: "!max-w-none p-4 sm:mt-20" });
