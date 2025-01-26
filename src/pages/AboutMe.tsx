@@ -1,6 +1,6 @@
 import SectionWrapper from "@/components/hoc/SectionWrapper";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaPython, FaCode } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiRedux } from "react-icons/si";
 
 function AboutMe() {

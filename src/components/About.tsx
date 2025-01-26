@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { gmail, linkedIn } from "@/assets/social";
