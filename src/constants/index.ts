@@ -17,6 +17,7 @@ import {
   nextjs2,
   wordpress,
   php,
+  postgres,
 } from "@/assets/tech";
 import { Experience, Project } from "@/types";
 
@@ -66,13 +67,12 @@ export const technologies = [
     icon: django,
   },
   {
+    name : "PostgreSQL",
+    icon: postgres
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
-  },
-
-  {
-    name: "git",
-    icon: git,
   },
   {
     name: "figma",
@@ -94,12 +94,7 @@ export const experiences: Experience[] = [
       new Date().getMonth() - new Date(2024, 4).getMonth() + 2 +  (12 * (new Date().getFullYear() -  new Date(2024, 4).getFullYear()))
     } months`,
     points: [
-      "Built dashboards with Recharts.js & TanStack Tables, boosting user engagement by 25%.",
-      "Created reusable UI components with ShadcnUI, reducing development time by 20%.",
-      "Implemented SOLID principles and best practices for maintainable, scalable code.",
-      "Set up Google Analytics and Ads integration for improved campaign tracking.",
-      "Led cross-cultural team collaboration using ClickUp and Discord for timely delivery.",
-      "Developed tech solutions to enhance Malaysian community outcomes.",
+      "Conducted code reviews for interns, ensuring they adhere to company standards, while supporting their learning process and bestpractices.","Collaborated and worked on 6 major projects with a team of 6 people, assisting in the development of data-base, internal APIs,middle-wares and software solutions, as well as setting up the CI/CD pipelines with GitHub actions.","Designed , Developed and modified over 25+ software solutions and custom reusable components increasing code reusability by 50% and reducing development time by 20% .","Reduced website load time by 40% through optimization and code minification, utilizing open source tools like google lighthouse toboast website performance and SEO.","Increased user engagement by 25% with enhanced UI features and real-time feedback loops.",
     ],
   },
 ];

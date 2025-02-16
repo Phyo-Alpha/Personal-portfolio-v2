@@ -16,6 +16,7 @@ import nextjs from "./next-js.svg";
 import nextjs2 from './nextJS2.jpg';
 import wordpress from './wordpress.png';
 import php from './php.png';
+import postgres from './postgres.png';
 
 export {
   html,
@@ -35,5 +36,6 @@ export {
   nextjs,
   nextjs2,
   wordpress,
-  php
+  php,
+  postgres
 };

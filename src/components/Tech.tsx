@@ -25,8 +25,8 @@ function Tech() {
                     >
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity" />
                         <BallCanvas icon={technology.icon} />
-                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm">
+                        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:opacity-100 transition-opacity min-w-32 flex justify-center">
+                            <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm capitalize">
                                 {technology.name}
                             </span>
                         </div>
