@@ -7,7 +7,6 @@ import {
   typescript,
   django,
   mongodb,
-  git,
   figma,
   docker,
   react,
