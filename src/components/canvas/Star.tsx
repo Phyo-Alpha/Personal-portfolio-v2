@@ -8,7 +8,7 @@ import { Object3D, Vector3 } from "three";
 const Stars = (props) => {
     const ref = useRef<Object3D>();
     const [sphere] = useState(() => {
-        const stars = random.inSphere(new Float32Array(300), { radius: 1.0 })
+        const stars = random.inSphere(new Float32Array(100), { radius: 1.0 })
         if (stars.some(v => isNaN(v))) throw new Error("Invalid positions data");
         return stars;
     });

@@ -27,7 +27,7 @@ function About() {
                         <div className="p-2 bg-blue-100 rounded-full">
                             <MapPin className="text-blue-600" />
                         </div>
-                        <p className="text-lg text-muted-foreground">Yangon, Myanmar</p>
+                        <p className="text-lg text-muted-foreground">Bangkok, Thailand</p>
                     </motion.div>
 
                     <motion.p variants={fadeIn("up", "spring", 0.4, 1)} className="text-xl leading-relaxed text-muted-foreground">
